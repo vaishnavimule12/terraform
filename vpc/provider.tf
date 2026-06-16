@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = var.bucket_name
+    bucket         =  "tfstate-vpc42"
     key            = "terraform.tfstate"
     region         = "us-north-1"
-    dynamodb_table = var.dynamodb_table
+    dynamodb_table = "tfstate-lock"
   }
 }
 provider "aws" {

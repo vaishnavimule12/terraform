@@ -1,9 +1,6 @@
 variable "region" {
   default = "us-east-1"
 }
-variable "bucket_name" {
-  default = "tfstate-vpc42"
-}
 variable "vpc_cidr" {
   default = "10.0.0.0/16"
 }
@@ -18,9 +15,6 @@ variable "availability_zone1" {
 }
 variable "availability_zone2" {
   default = "us-east-1b"
-}
-variable "dynamodb_table" {
-  default = "tfstate-lock"
 }
 variable "ami" {
   default = "ami-00263659a97a6c29c"
