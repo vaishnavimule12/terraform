@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         =  "tfstate-vpc42"
+    bucket         =  "tfstate-vpc421"
     key            = "terraform.tfstate"
-    region         = "us-north-1"
-    dynamodb_table = "tfstate-lock"
+    region         = "us-east-1"
+    dynamodb_table = "value"
   }
 }
 provider "aws" {
