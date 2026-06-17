@@ -1,4 +1,4 @@
-resource "aws_vpc" "myvpc" {
+resource "aws_vpc" "my_vpc" {
   cidr_block = var.vpc_cidr
 }
 resource "aws_subnet" "pub-sub" {
