@@ -23,7 +23,7 @@ variable "instance_type" {
   default = "t3.micro"
 }
 variable "key_name" {
-  default = "key-rsa"
+  default = "security-key"
 }
 variable "vpc_security_group_ids" {
   default = ["sg-0fba9f91c48a1c396"]
