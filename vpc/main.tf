@@ -36,12 +36,30 @@ resource "aws_route_table_association" "myroute-sub-association" {
   subnet_id      = aws_subnet.pub-sub.id
   route_table_id = aws_route_table.myrt.id
 }
+resource "aws_security_group" "my_sg" {
+  name   = "my-sg"
+  vpc_id = aws_vpc.my_vpc.id
+
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
 resource "aws_instance" "my-instance" {
   ami                    = var.ami
   instance_type          = var.instance_type
   key_name               = var.key_name
   subnet_id              = aws_subnet.pub-sub.id
-  vpc_security_group_ids = var.vpc_security_group_ids
+  vpc_security_group_ids = [aws_security_group.my_sg.id]
   tags = {
     Name = "my-instance"
     name = "my-instance"
