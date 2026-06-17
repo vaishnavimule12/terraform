@@ -17,7 +17,7 @@ variable "availability_zone2" {
   default = "us-east-1b"
 }
 variable "ami" {
-  default = "ami-00263659a97a6c29c"
+  default = "ami-0b6d9d3d33ba97d99"
 }
 variable "instance_type" {
   default = "t3.micro"
