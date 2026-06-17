@@ -41,7 +41,7 @@ resource "aws_instance" "my-instance" {
   instance_type          = var.instance_type
   key_name               = var.key_name
   subnet_id              = aws_subnet.pub-sub.id
-  vpc_security_group_ids = [var.vpc_security_group_ids]
+  vpc_security_group_ids = var.vpc_security_group_ids
   tags = {
     Name = "my-instance"
     name = "my-instance"
