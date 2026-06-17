@@ -26,5 +26,5 @@ variable "key_name" {
   default = "key-rsa"
 }
 variable "vpc_security_group_ids" {
-  default = ["sg-0ad4e5c50c284b1a5"]
+  default = ["sg-0fba9f91c48a1c396"]
 }
